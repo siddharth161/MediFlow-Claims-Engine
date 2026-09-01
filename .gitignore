@@ -1,0 +1,19 @@
+## Build and IDE outputs
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Test results
+TestResults/
+[Tt]est[Rr]esult*/
+
+## OS Files
+.DS_Store
+Thumbs.db
