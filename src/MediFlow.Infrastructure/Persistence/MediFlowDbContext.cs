@@ -17,6 +17,8 @@ public class MediFlowDbContext(DbContextOptions<MediFlowDbContext> options) : Db
     {
         base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Ignore<DomainEvent>();
+
         // Provider configuration
         modelBuilder.Entity<Provider>(builder =>
         {

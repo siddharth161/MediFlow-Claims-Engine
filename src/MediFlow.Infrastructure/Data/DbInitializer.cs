@@ -9,6 +9,8 @@ public static class DbInitializer
 {
     public static async Task SeedAsync(MediFlowDbContext context, ILogger logger)
     {
+        await context.Database.EnsureCreatedAsync();
+
         if (context.Providers.Any())
         {
             return; // DB already seeded

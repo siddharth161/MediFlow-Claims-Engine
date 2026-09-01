@@ -10,6 +10,7 @@ public abstract class BaseEntity
     public DateTime? UpdatedAtUtc { get; set; }
 
     private readonly List<DomainEvent> _domainEvents = [];
+    [System.ComponentModel.DataAnnotations.Schema.NotMapped]
     public IReadOnlyCollection<DomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 
     public void AddDomainEvent(DomainEvent domainEvent) => _domainEvents.Add(domainEvent);
